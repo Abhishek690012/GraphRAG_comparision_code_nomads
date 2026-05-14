@@ -1,0 +1,33 @@
+input:
+  paths:
+    - "data/input"
+  formats: ["csv", "json"]
+  required_fields:
+    - "raw_context"
+    - "questions"
+    - "answers"
+    - "question_type"
+    - "evidence"
+    - "evidence_relations"
+    - "evidence_triples"
+    - "source_id"
+    - "doc_id"
+
+processing:
+  chunk_size: 512
+  overlap: 50
+  tokenizer_model: "cl100k_base"  # for tiktoken, e.g., GPT-3.5/4
+  text_cleaning:
+    remove_headers: false
+    remove_html: false
+    remove_non_printable: false
+    normalize_whitespace: false
+
+output:
+  path: "data/output"
+  format: "jsonl"  # or "json"
+  dry_run: false
+
+logging:
+  level: "INFO"
+  file: "logs/preprocessing.log"

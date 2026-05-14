@@ -1,0 +1,36 @@
+pipeline_id: "llm_only_api"
+
+api:
+  endpoint: "https://api.mistral.ai/v1/chat/completions"
+  api_key_env_var: "MISTRAL_API_KEY"
+  model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+  request_timeout_seconds: 60
+
+generation:
+  max_tokens: 1024
+  temperature: 0.7
+  top_p: 0.9
+  repetition_penalty: 1.0
+  stop_sequences: []
+  system_prompt: "You are a helpful, accurate assistant. Answer the user's question clearly and concisely."
+
+tokenizer:
+  model: "mistral-common"
+  context_window: 32768
+  truncation_strategy: "reject"
+
+cost:
+  per_million_input_tokens: 0.25
+  per_million_output_tokens: 0.25
+
+rate_limiting:
+  max_retries: 5
+  backoff_base_seconds: 1.0
+  backoff_max_seconds: 60.0
+  requests_per_minute: 60
+
+dry_run: false
+
+logging:
+  level: "INFO"
+  file: "logs/llm_only.log"
