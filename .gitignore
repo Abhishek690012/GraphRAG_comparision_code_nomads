@@ -1,1 +1,24 @@
-data/output/processed_data.jsonl
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Runtime & Data
+logs/
+cache/
+chroma/
+data/chroma_db/
+data/output/
+*.sqlite3
+
+# Environment
+.env
+.env.local
+*.key
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db

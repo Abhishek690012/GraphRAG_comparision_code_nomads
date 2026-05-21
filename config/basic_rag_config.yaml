@@ -1,0 +1,63 @@
+pipeline_id: "basic_rag_api"
+
+chroma:
+  collection_name: "medical_chunks"
+  persist_directory: "data/chroma_db"
+  distance_metric: "cosine"
+  embedding_dimension: 384
+
+embeddings:
+  mode: local
+  model_name_or_path: BAAI/bge-small-en-v1.5
+  device: cpu
+  normalize_embeddings: true
+  batch_size: 16
+  cache_dir: ./cache/embeddings
+  trust_remote_code: false
+
+retrieval:
+  top_k: 5
+  score_threshold: 0.3
+  metadata_filters: null
+  use_cache: true
+
+api:
+  endpoint: "https://api.mistral.ai/v1/chat/completions"
+  api_key_env_var: "MISTRAL_API_KEY"
+  model_id: "open-mistral-7b"
+  request_timeout_seconds: 60
+
+generation:
+  max_tokens: 1024
+  temperature: 0.7
+  top_p: 0.9
+  repetition_penalty: 1.0
+  stop_sequences: []
+  system_prompt: "You are a helpful medical assistant. Answer the user's question based on the provided context.\nIf the context does not contain enough information, say so clearly."
+
+tokenizer:
+  model: "mistral-common"
+  context_window: 32768
+  truncation_strategy: "truncate"
+  max_context_tokens: 4096
+
+cost:
+  per_million_input_tokens: 0.25
+  per_million_output_tokens: 0.25
+
+rate_limiting:
+  max_retries: 5
+  backoff_base_seconds: 1.0
+  backoff_max_seconds: 60.0
+  requests_per_minute: 60
+
+cache:
+  redis_url: "redis://localhost:6379/0"
+  ttl_seconds: 3600
+  key_prefix: "basic_rag_bge_small_v1"
+
+dry_run: false
+
+logging:
+  level: "INFO"
+  file: "logs/basic_rag.log"

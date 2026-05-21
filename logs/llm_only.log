@@ -1,0 +1,57 @@
+2026-05-20 17:02:04,242 - src.llm_only.config_validator - WARNING - Environment variable 'MISTRAL_API_KEY' is not set. Proceeding in dry-run mode.
+2026-05-20 17:02:34,006 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-20 17:02:34,026 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-20 17:02:34,026 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-20 17:02:34,026 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=True
+2026-05-20 17:02:34,026 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions
+2026-05-20 17:02:34,056 - src.llm_only.api_client - INFO - Dry-run: simulated response with ~754 prompt tokens, ~17 completion tokens.
+2026-05-20 17:06:10,527 - src.llm_only.config_validator - WARNING - Environment variable 'MISTRAL_API_KEY' is not set. Proceeding in dry-run mode.
+2026-05-20 17:06:22,884 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-20 17:06:22,898 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-20 17:06:22,898 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-20 17:06:22,898 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=True
+2026-05-20 17:06:22,898 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions
+2026-05-20 17:06:22,952 - src.llm_only.api_client - INFO - Dry-run: simulated response with ~754 prompt tokens, ~17 completion tokens.
+2026-05-20 17:06:22,998 - src.llm_only.api_client - INFO - Dry-run: simulated response with ~774 prompt tokens, ~17 completion tokens.
+2026-05-20 17:14:22,041 - src.llm_only.config_validator - WARNING - Environment variable 'MISTRAL_API_KEY' is not set. Proceeding in dry-run mode.
+2026-05-20 17:14:41,802 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-20 17:14:41,816 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-20 17:14:41,816 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-20 17:14:41,816 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=True
+2026-05-20 17:14:41,816 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions
+2026-05-20 17:14:41,852 - src.llm_only.api_client - INFO - Dry-run: simulated response with ~754 prompt tokens, ~17 completion tokens.
+2026-05-22 00:40:20,011 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-22 00:40:20,024 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-22 00:40:20,024 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-22 00:40:20,024 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=False
+2026-05-22 00:40:20,024 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions
+2026-05-22 00:40:23,758 - src.llm_only.api_client - INFO - API client session closed.
+2026-05-22 00:42:24,673 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-22 00:42:24,686 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-22 00:42:24,687 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-22 00:42:24,687 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=False
+2026-05-22 00:42:24,687 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions
+2026-05-22 00:42:47,830 - src.llm_only.api_client - INFO - API client session closed.
+2026-05-22 00:50:04,951 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-22 00:50:04,964 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-22 00:50:04,965 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-22 00:50:04,965 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=False
+2026-05-22 00:50:04,965 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions
+2026-05-22 00:50:07,846 - src.llm_only.api_client - INFO - API client session closed.
+2026-05-22 00:50:49,354 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-22 00:50:49,367 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-22 00:50:49,368 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-22 00:50:49,368 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=False
+2026-05-22 00:50:49,368 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions
+2026-05-22 00:50:53,412 - src.llm_only.api_client - INFO - API client session closed.
+2026-05-22 00:56:21,133 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-22 00:56:21,147 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-22 00:56:21,147 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-22 00:56:21,147 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=False
+2026-05-22 00:56:21,147 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions
+2026-05-22 00:57:35,726 - src.llm_only.api_client - INFO - API client session closed.
+2026-05-22 00:58:28,983 - src.llm_only.prompt_formatter - INFO - PromptFormatter initialized with system prompt (162 chars).
+2026-05-22 00:58:28,996 - src.llm_only.token_counter - INFO - Initialized mistral-common tokenizer (v3).
+2026-05-22 00:58:28,996 - src.llm_only.rate_limiter - INFO - AsyncRateLimiter initialized: 60 RPM, max_retries=5, backoff_base=1.0s, backoff_max=60.0s
+2026-05-22 00:58:28,996 - src.llm_only.api_client - INFO - LLMAPIClient initialized: endpoint=https://api.mistral.ai/v1/chat/completions, model=open-mistral-7b, timeout=60s, dry_run=False
+2026-05-22 00:58:28,996 - src.llm_only.metrics - INFO - MetricsCollector initialized: pipeline_id=basic_rag_api, api_provider=https://api.mistral.ai/v1/chat/completions

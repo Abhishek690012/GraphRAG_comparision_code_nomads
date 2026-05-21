@@ -3,7 +3,7 @@ pipeline_id: "llm_only_api"
 api:
   endpoint: "https://api.mistral.ai/v1/chat/completions"
   api_key_env_var: "MISTRAL_API_KEY"
-  model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+  model_id: "open-mistral-7b"
   request_timeout_seconds: 60
 
 generation:

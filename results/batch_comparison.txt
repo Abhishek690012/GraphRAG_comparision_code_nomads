@@ -1,0 +1,542 @@
+Starting batch mode on 20 questions...
+
+[1/20] Query: What is the most common type of skin cancer?
+                                   PIPELINE COMPARISON RESULTS                                    
+                       Query: What is the most common type of skin cancer?                        
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ The most common type of skin cancer │ The most common type of skin cancer │
+│                    │ is **Basal Cell Carcinoma (BCC)**.  │ is **basal cell skin cancer**, also │
+│                    │ It accounts for about **75-80%** of │ known as **basal cell carcinoma     │
+│                    │ all skin cancer cases. While it is  │ (BCC)**. It is the most frequently  │
+│                    │ less ...                            │ diagnose...                         │
+│ Prompt Tokens      │                                  34 │                                 687 │
+│ Completion Tokens  │                                  73 │                                  96 │
+│ Total Tokens       │                                 107 │                                 783 │
+│ Latency (ms)       │                                1512 │                                   2 │
+│ Est. Cost ($)      │                            0.000027 │                            0.000196 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +676 tokens │
+│ Latency Difference │                                   - │                            -1510 ms │
+│ Cost Difference    │                                   - │                          +$0.000169 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[2/20] Query: From which cell type does basal cell carcinoma arise?
+                                   PIPELINE COMPARISON RESULTS                                    
+                   Query: From which cell type does basal cell carcinoma arise?                   
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Basal cell carcinoma (BCC) arises   │ Based on the provided context,      │
+│                    │ from **basal cells**, which are     │ **basal cell carcinoma (BCC)**      │
+│                    │ found in the **basal layer of the   │ arises from **basal cells**, which  │
+│                    │ epidermis** (the deepest layer of   │ are found in the **lower part of    │
+│                    │ the skin). Th...                    │ the epidermis** (...                │
+│ Prompt Tokens      │                                  34 │                                 693 │
+│ Completion Tokens  │                                  74 │                                  72 │
+│ Total Tokens       │                                 108 │                                 765 │
+│ Latency (ms)       │                                1191 │                                   0 │
+│ Est. Cost ($)      │                            0.000027 │                            0.000191 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +657 tokens │
+│ Latency Difference │                                   - │                            -1191 ms │
+│ Cost Difference    │                                   - │                          +$0.000164 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[3/20] Query: Which anatomical locations are most commonly affected by basal cell carcinoma?
+                                   PIPELINE COMPARISON RESULTS                                    
+      Query: Which anatomical locations are most commonly affected by basal cell carcinoma?       
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Basal cell carcinoma (BCC) most     │ Based on the provided context,      │
+│                    │ commonly affects **sun-exposed      │ **basal cell carcinoma (basal cell  │
+│                    │ areas** of the skin. The most       │ skin cancer)** most commonly        │
+│                    │ frequently affected anatomical      │ affects the following anatomical    │
+│                    │ locations include:                  │ locations:                          │
+│                    │                                     │                                     │
+│                    │ 1. ...                              │ 1. **Fa...                          │
+│ Prompt Tokens      │                                  36 │                                 699 │
+│ Completion Tokens  │                                 119 │                                 127 │
+│ Total Tokens       │                                 155 │                                 826 │
+│ Latency (ms)       │                                1665 │                                   0 │
+│ Est. Cost ($)      │                            0.000039 │                            0.000207 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +671 tokens │
+│ Latency Difference │                                   - │                            -1665 ms │
+│ Cost Difference    │                                   - │                          +$0.000168 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[4/20] Query: What is the primary risk factor for basal cell carcinoma?
+                                   PIPELINE COMPARISON RESULTS                                    
+                 Query: What is the primary risk factor for basal cell carcinoma?                 
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ The **primary risk factor** for     │ The **primary risk factor** for     │
+│                    │ **basal cell carcinoma (BCC)** is   │ basal cell carcinoma (basal cell    │
+│                    │ **excessive exposure to ultraviolet │ skin cancer) is **exposure to       │
+│                    │ (UV) radiation**, particularly      │ ultraviolet (UV) light**,           │
+│                    │ from:                               │ particularly from the sun ...       │
+│                    │                                     │                                     │
+│                    │ - **Sun...                          │                                     │
+│ Prompt Tokens      │                                  35 │                                 665 │
+│ Completion Tokens  │                                 137 │                                 142 │
+│ Total Tokens       │                                 172 │                                 807 │
+│ Latency (ms)       │                                1576 │                                   0 │
+│ Est. Cost ($)      │                            0.000043 │                            0.000202 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +635 tokens │
+│ Latency Difference │                                   - │                            -1576 ms │
+│ Cost Difference    │                                   - │                          +$0.000159 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[5/20] Query: How does fair skin affect the risk of developing BCC?
+                                   PIPELINE COMPARISON RESULTS                                    
+                   Query: How does fair skin affect the risk of developing BCC?                   
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Fair skin significantly increases   │ Based on the provided context,      │
+│                    │ the risk of developing **basal cell │ **fair skin increases the risk of   │
+│                    │ carcinoma (BCC)**, the most common  │ developing basal cell carcinoma     │
+│                    │ type of skin cancer. Here’s why:    │ (BCC)** due to lower levels of      │
+│                    │                                     │ **melanin**, the sk...              │
+│                    │ 1. **Low...                         │                                     │
+│ Prompt Tokens      │                                  36 │                                 660 │
+│ Completion Tokens  │                                 243 │                                 141 │
+│ Total Tokens       │                                 279 │                                 801 │
+│ Latency (ms)       │                                2191 │                                   0 │
+│ Est. Cost ($)      │                            0.000070 │                            0.000200 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +522 tokens │
+│ Latency Difference │                                   - │                            -2191 ms │
+│ Cost Difference    │                                   - │                          +$0.000130 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[6/20] Query: Does older age influence the risk of basal cell carcinoma?
+                                   PIPELINE COMPARISON RESULTS                                    
+                Query: Does older age influence the risk of basal cell carcinoma?                 
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Yes, **older age** is a significant │ Yes, **older age** is a known risk  │
+│                    │ risk factor for **basal cell        │ factor for **basal cell carcinoma   │
+│                    │ carcinoma (BCC)**, the most common  │ (BCC)**. According to the provided  │
+│                    │ type of skin cancer. Key points:    │ context, the risk of developing     │
+│                    │                                     │ basal cell ...                      │
+│                    │ - **Increased...                    │                                     │
+│ Prompt Tokens      │                                  35 │                                 664 │
+│ Completion Tokens  │                                 164 │                                 106 │
+│ Total Tokens       │                                 199 │                                 770 │
+│ Latency (ms)       │                                2676 │                                   0 │
+│ Est. Cost ($)      │                            0.000050 │                            0.000192 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +571 tokens │
+│ Latency Difference │                                   - │                            -2676 ms │
+│ Cost Difference    │                                   - │                          +$0.000143 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[7/20] Query: How does family history impact the risk of basal cell carcinoma?
+                                   PIPELINE COMPARISON RESULTS                                    
+             Query: How does family history impact the risk of basal cell carcinoma?              
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Family history can **increase the   │ Based on the provided context,      │
+│                    │ risk** of basal cell carcinoma      │ having a **family history of skin   │
+│                    │ (BCC), the most common type of skin │ cancer**—including basal cell       │
+│                    │ cancer. Here’s how it impacts risk: │ carcinoma (BCC)—increases your risk │
+│                    │                                     │ of developing th...                 │
+│                    │ 1. **Gene...                        │                                     │
+│ Prompt Tokens      │                                  36 │                                 665 │
+│ Completion Tokens  │                                 297 │                                 113 │
+│ Total Tokens       │                                 333 │                                 778 │
+│ Latency (ms)       │                                3564 │                                   0 │
+│ Est. Cost ($)      │                            0.000083 │                            0.000195 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +445 tokens │
+│ Latency Difference │                                   - │                            -3564 ms │
+│ Cost Difference    │                                   - │                          +$0.000111 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[8/20] Query: Is immune suppression a risk factor for BCC?
+                                   PIPELINE COMPARISON RESULTS                                    
+                       Query: Is immune suppression a risk factor for BCC?                        
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Yes, **immune suppression** is a    │ Yes, **immune suppression is a risk │
+│                    │ well-established **risk factor**    │ factor for basal cell carcinoma     │
+│                    │ for **basal cell carcinoma (BCC)**, │ (BCC)**.                            │
+│                    │ the most common type of skin        │                                     │
+│                    │ cancer.                             │ People with weakened immune         │
+│                    │                                     │ systems—such as those with          │
+│                    │ ### Key...                          │ conditions lik...                   │
+│ Prompt Tokens      │                                  34 │                                 658 │
+│ Completion Tokens  │                                 237 │                                  76 │
+│ Total Tokens       │                                 271 │                                 734 │
+│ Latency (ms)       │                                2363 │                                   0 │
+│ Est. Cost ($)      │                            0.000068 │                            0.000183 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +463 tokens │
+│ Latency Difference │                                   - │                            -2363 ms │
+│ Cost Difference    │                                   - │                          +$0.000116 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[9/20] Query: What are common symptoms of basal cell carcinoma?
+                                   PIPELINE COMPARISON RESULTS                                    
+                     Query: What are common symptoms of basal cell carcinoma?                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Basal cell carcinoma (BCC)          │ Based on the provided context, the  │
+│                    │ typically presents with these       │ common symptoms of **basal cell     │
+│                    │ common symptoms:                    │ carcinoma (BCC)** can appear        │
+│                    │                                     │ differently depending on skin tone. │
+│                    │ 1. **Pearly or waxy bump** – Often  │ Here are the ty...                  │
+│                    │ translucent or shiny with visible   │                                     │
+│                    │ blo...                              │                                     │
+│ Prompt Tokens      │                                  33 │                                 690 │
+│ Completion Tokens  │                                 158 │                                 191 │
+│ Total Tokens       │                                 191 │                                 881 │
+│ Latency (ms)       │                                2063 │                                   0 │
+│ Est. Cost ($)      │                            0.000048 │                            0.000220 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +690 tokens │
+│ Latency Difference │                                   - │                            -2063 ms │
+│ Cost Difference    │                                   - │                          +$0.000172 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[10/20] Query: Which diagnostic methods are used for BCC?
+                                   PIPELINE COMPARISON RESULTS                                    
+                        Query: Which diagnostic methods are used for BCC?                         
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Basal Cell Carcinoma (BCC) is       │ Based on the provided context, the  │
+│                    │ typically diagnosed using the       │ following diagnostic methods are    │
+│                    │ following methods:                  │ typically used to identify **Basal  │
+│                    │                                     │ Cell Carcinoma (BCC)**:             │
+│                    │ 1. **Clinical Examination**: A      │                                     │
+│                    │ dermatologist or healthcare         │ 1. **Skin Examinati...              │
+│                    │ provider...                         │                                     │
+│ Prompt Tokens      │                                  33 │                                 691 │
+│ Completion Tokens  │                                 337 │                                 211 │
+│ Total Tokens       │                                 370 │                                 902 │
+│ Latency (ms)       │                                3060 │                                   0 │
+│ Est. Cost ($)      │                            0.000092 │                            0.000226 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +532 tokens │
+│ Latency Difference │                                   - │                            -3061 ms │
+│ Cost Difference    │                                   - │                          +$0.000133 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[11/20] Query: What is the most common treatment for basal cell carcinoma?
+                                   PIPELINE COMPARISON RESULTS                                    
+                Query: What is the most common treatment for basal cell carcinoma?                
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ The most common treatment for       │ The most common treatment for       │
+│                    │ **basal cell carcinoma (BCC)** is   │ **basal cell carcinoma (BCC)** is   │
+│                    │ **surgical excision**, particularly │ **surgery to remove the cancerous   │
+│                    │ **Mohs micrographic surgery**,      │ tissue**. This can be done in       │
+│                    │ which offers the...                 │ several ways, such ...              │
+│ Prompt Tokens      │                                  35 │                                 703 │
+│ Completion Tokens  │                                 143 │                                 198 │
+│ Total Tokens       │                                 178 │                                 901 │
+│ Latency (ms)       │                                1708 │                                   0 │
+│ Est. Cost ($)      │                            0.000044 │                            0.000225 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +723 tokens │
+│ Latency Difference │                                   - │                            -1708 ms │
+│ Cost Difference    │                                   - │                          +$0.000181 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[12/20] Query: When might radiation therapy be used in BCC?
+                                   PIPELINE COMPARISON RESULTS                                    
+                       Query: When might radiation therapy be used in BCC?                        
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Radiation therapy (RT) for **Basal  │ Based on the provided context,      │
+│                    │ Cell Carcinoma (BCC)** is typically │ **radiation therapy** for **basal   │
+│                    │ considered in the following         │ cell carcinoma (BCC)** is typically │
+│                    │ scenarios:                          │ considered in the following         │
+│                    │                                     │ situations:                         │
+│                    │ 1. **High-risk primary BCC** –      │                                     │
+│                    │ Large...                            │ 1. **...                            │
+│ Prompt Tokens      │                                  34 │                                 669 │
+│ Completion Tokens  │                                 266 │                                 219 │
+│ Total Tokens       │                                 300 │                                 888 │
+│ Latency (ms)       │                                2860 │                                   0 │
+│ Est. Cost ($)      │                            0.000075 │                            0.000222 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +588 tokens │
+│ Latency Difference │                                   - │                            -2860 ms │
+│ Cost Difference    │                                   - │                          +$0.000147 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[13/20] Query: What is recurrence in the context of BCC?
+                                   PIPELINE COMPARISON RESULTS                                    
+                         Query: What is recurrence in the context of BCC?                         
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ In the context of **Basal Cell      │ In the context of **Basal Cell      │
+│                    │ Carcinoma (BCC)**, **recurrence**   │ Carcinoma (BCC)**, **recurrence**   │
+│                    │ refers to the return or regrowth of │ refers to the return or regrowth of │
+│                    │ the cancer after it has been        │ the cancer in the same area after   │
+│                    │ treated and initi...                │ it has been ...                     │
+│ Prompt Tokens      │                                  34 │                                 693 │
+│ Completion Tokens  │                                 142 │                                 169 │
+│ Total Tokens       │                                 176 │                                 862 │
+│ Latency (ms)       │                                1773 │                                   0 │
+│ Est. Cost ($)      │                            0.000044 │                            0.000216 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +686 tokens │
+│ Latency Difference │                                   - │                            -1773 ms │
+│ Cost Difference    │                                   - │                          +$0.000171 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[14/20] Query: What does follow-up for BCC typically include?
+                                   PIPELINE COMPARISON RESULTS                                    
+                      Query: What does follow-up for BCC typically include?                       
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Follow-up for **Basal Cell          │ Based on the provided context, the  │
+│                    │ Carcinoma (BCC)** typically         │ information does not explicitly     │
+│                    │ includes:                           │ detail what follow-up for **basal   │
+│                    │                                     │ cell carcinoma (BCC)** typically    │
+│                    │ 1. **Clinical Examination** –       │ includes. How...                    │
+│                    │ Regular check-ups to monitor for    │                                     │
+│                    │ recurrence or new ...               │                                     │
+│ Prompt Tokens      │                                  34 │                                 701 │
+│ Completion Tokens  │                                 235 │                                 256 │
+│ Total Tokens       │                                 269 │                                 957 │
+│ Latency (ms)       │                                2106 │                                   0 │
+│ Est. Cost ($)      │                            0.000067 │                            0.000239 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +688 tokens │
+│ Latency Difference │                                   - │                            -2106 ms │
+│ Cost Difference    │                                   - │                          +$0.000172 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[15/20] Query: Which skin cancer subtype arises from basal cells?
+                                   PIPELINE COMPARISON RESULTS                                    
+                    Query: Which skin cancer subtype arises from basal cells?                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ The skin cancer subtype that arises │ The skin cancer subtype that arises │
+│                    │ from basal cells is called **Basal  │ from basal cells is called **basal  │
+│                    │ Cell Carcinoma (BCC)**. It is the   │ cell carcinoma (BCC)**, also known  │
+│                    │ most common type of skin cancer and │ as **basal cell skin cancer**. This │
+│                    │ typica...                           │ cance...                            │
+│ Prompt Tokens      │                                  33 │                                 684 │
+│ Completion Tokens  │                                  43 │                                  52 │
+│ Total Tokens       │                                  76 │                                 736 │
+│ Latency (ms)       │                                 710 │                                   0 │
+│ Est. Cost ($)      │                            0.000019 │                            0.000184 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +660 tokens │
+│ Latency Difference │                                   - │                             -710 ms │
+│ Cost Difference    │                                   - │                          +$0.000165 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[16/20] Query: What anatomical layer do basal cells belong to?
+                                   PIPELINE COMPARISON RESULTS                                    
+                      Query: What anatomical layer do basal cells belong to?                      
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Basal cells belong to the **basal   │ Based on the provided context,      │
+│                    │ layer (stratum basale)** of the     │ **basal cells** are located in the  │
+│                    │ **epidermis**, specifically within  │ **lowest part of the epidermis**,   │
+│                    │ the **stratum germinativum** (or    │ which is the **topmost layer of the │
+│                    │ stratum basal...                    │ skin**.                             │
+│                    │                                     │                                     │
+│                    │                                     │ Th...                               │
+│ Prompt Tokens      │                                  33 │                                 703 │
+│ Completion Tokens  │                                  70 │                                  66 │
+│ Total Tokens       │                                 103 │                                 769 │
+│ Latency (ms)       │                                1608 │                                   0 │
+│ Est. Cost ($)      │                            0.000026 │                            0.000192 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +666 tokens │
+│ Latency Difference │                                   - │                            -1608 ms │
+│ Cost Difference    │                                   - │                          +$0.000167 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[17/20] Query: Is sun exposure a risk factor for BCC?
+                                   PIPELINE COMPARISON RESULTS                                    
+                          Query: Is sun exposure a risk factor for BCC?                           
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Yes, **sun exposure** is a **major  │ Yes, **sun exposure** is a **major  │
+│                    │ risk factor** for **basal cell      │ risk factor** for basal cell        │
+│                    │ carcinoma (BCC)**, the most common  │ carcinoma (BCC), the most common    │
+│                    │ type of skin cancer.                │ type of skin cancer.                │
+│                    │                                     │                                     │
+│                    │ Key points:                         │ The context provided clearly...     │
+│                    │ - **UV radia...                     │                                     │
+│ Prompt Tokens      │                                  34 │                                 658 │
+│ Completion Tokens  │                                 161 │                                 131 │
+│ Total Tokens       │                                 195 │                                 789 │
+│ Latency (ms)       │                                2540 │                                   0 │
+│ Est. Cost ($)      │                            0.000049 │                            0.000197 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +594 tokens │
+│ Latency Difference │                                   - │                            -2541 ms │
+│ Cost Difference    │                                   - │                          +$0.000149 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[18/20] Query: Do tanning beds increase the risk of BCC?
+                                   PIPELINE COMPARISON RESULTS                                    
+                         Query: Do tanning beds increase the risk of BCC?                         
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Yes, **tanning beds significantly   │ Yes, according to the provided      │
+│                    │ increase the risk of basal cell     │ context, **tanning beds increase    │
+│                    │ carcinoma (BCC)**, the most common  │ the risk of basal cell carcinoma    │
+│                    │ type of skin cancer.                │ (BCC)**. The context explicitly     │
+│                    │                                     │ states that **UV l...               │
+│                    │ The **International Agen...         │                                     │
+│ Prompt Tokens      │                                  35 │                                 659 │
+│ Completion Tokens  │                                 129 │                                  71 │
+│ Total Tokens       │                                 164 │                                 730 │
+│ Latency (ms)       │                                1330 │                                   0 │
+│ Est. Cost ($)      │                            0.000041 │                            0.000182 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +566 tokens │
+│ Latency Difference │                                   - │                            -1331 ms │
+│ Cost Difference    │                                   - │                          +$0.000141 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[19/20] Query: What hair and eye colors are associated with increased BCC risk?
+                                   PIPELINE COMPARISON RESULTS                                    
+             Query: What hair and eye colors are associated with increased BCC risk?              
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Basal cell carcinoma (BCC) risk is  │ Based on the provided context,      │
+│                    │ **strongly associated** with:       │ **red or blond hair** and **light   │
+│                    │                                     │ eye color** are associated with an  │
+│                    │ ### **Hair Color:**                 │ increased risk of basal cell skin   │
+│                    │ - **Fair (light blonde, red, or     │ cancer (BCC)....                    │
+│                    │ auburn)** – Higher risk due t...    │                                     │
+│ Prompt Tokens      │                                  37 │                                 679 │
+│ Completion Tokens  │                                 205 │                                  64 │
+│ Total Tokens       │                                 242 │                                 743 │
+│ Latency (ms)       │                                2122 │                                   0 │
+│ Est. Cost ($)      │                            0.000061 │                            0.000186 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +501 tokens │
+│ Latency Difference │                                   - │                            -2122 ms │
+│ Cost Difference    │                                   - │                          +$0.000125 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+[20/20] Query: Can a history of radiation therapy increase BCC risk?
+                                   PIPELINE COMPARISON RESULTS                                    
+                   Query: Can a history of radiation therapy increase BCC risk?                   
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric             ┃ Pipeline 1 (LLM-Only)               ┃ Pipeline 2 (Basic RAG)              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Response           │ Yes, a history of **radiation       │ Yes, according to the provided      │
+│                    │ therapy**—particularly for          │ context, **a history of radiation   │
+│                    │ conditions like **actinic           │ therapy can increase the risk of    │
+│                    │ keratosis, basal cell carcinoma     │ developing basal cell skin cancer   │
+│                    │ (BCC), or other skin cancers**—c... │ (BCC)**. Radiat...                  │
+│ Prompt Tokens      │                                  35 │                                 659 │
+│ Completion Tokens  │                                 200 │                                  73 │
+│ Total Tokens       │                                 235 │                                 732 │
+│ Latency (ms)       │                                1693 │                                   0 │
+│ Est. Cost ($)      │                            0.000059 │                            0.000183 │
+│ Cache Hit          │                                  No │                                 Yes │
+│ Status             │                             SUCCESS │                             SUCCESS │
+├────────────────────┼─────────────────────────────────────┼─────────────────────────────────────┤
+│ SUMMARY            │                                     │                                     │
+│ Token Difference   │                                   - │                         +497 tokens │
+│ Latency Difference │                                   - │                            -1693 ms │
+│ Cost Difference    │                                   - │                          +$0.000124 │
+└────────────────────┴─────────────────────────────────────┴─────────────────────────────────────┘
+
+============================================================
+                     BATCH COMPARISON SUMMARY (N=20)                      
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                ┃ Pipeline 1 (LLM-Only) ┃ Pipeline 2 (Basic RAG) ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Total Queries         │                    20 │                     20 │
+│ Successful Queries    │                    20 │                     20 │
+│ Failed Queries        │                     0 │                      0 │
+│ Success Rate          │                100.0% │                 100.0% │
+│ Avg Prompt Tokens     │                  34.5 │                  679.0 │
+│ Avg Completion Tokens │                 171.7 │                  128.7 │
+│ Avg Total Tokens      │                 206.2 │                  807.7 │
+│ Avg Latency (ms)      │                2016.0 │                    0.4 │
+│ Total Cost ($)        │             $0.001031 │              $0.004038 │
+└───────────────────────┴───────────────────────┴────────────────────────┘
+============================================================
+
