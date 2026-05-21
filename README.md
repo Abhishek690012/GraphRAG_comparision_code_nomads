@@ -225,17 +225,15 @@ To run only one pipeline, you can use the orchestrator's environment checks. If 
    ```
 
 ## Results
-                        BATCH COMPARISON SUMMARY (N=40)                      
-┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ Metric                ┃ Pipeline 1 (LLM-Only) ┃ Pipeline 2 (Basic RAG) ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
-│ Total Queries         │                    40 │                     40 │
-│ Successful Queries    │                    38 │                     40 │
-│ Failed Queries        │                     2 │                      0 │
-│ Success Rate          │                95.0%  |                 100.0% |
-│ Avg Prompt Tokens     │                  34.5 │                  679.0 │
-│ Avg Completion Tokens │                 171.7 │                  128.7 │
-│ Avg Total Tokens      │                 206.2 │                  807.7 │
-│ Avg Latency (ms)      │                2016.0 │                    0.4 │
-│ Total Cost ($)        │             $0.001031 │              $0.004038 │
-└───────────────────────┴───────────────────────┴────────────────────────┘
+
+| Metric                | Pipeline 1 (LLM-Only) | Pipeline 2 (Basic RAG) |
+|-----------------------|----------------------:|-----------------------:|
+| Total Queries         |                    40 |                     40 |
+| Successful Queries    |                    38 |                     40 |
+| Failed Queries        |                     2 |                      0 |
+| Success Rate          |                 95.0% |                  100.0% |
+| Avg Prompt Tokens     |                  34.5 |                  679.0 |
+| Avg Completion Tokens |                 171.7 |                  128.7 |
+| Avg Total Tokens      |                 206.2 |                  807.7 |
+| Avg Latency (ms)      |                2016.0 |                    0.4 |
+| Total Cost ($)        |             $0.001031 |              $0.004038 |
